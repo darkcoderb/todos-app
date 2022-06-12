@@ -1,0 +1,21 @@
+.todosListItem {
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.todosListItemDone {
+    display: flex;
+    padding: 5px;
+    text-decoration: line-through black;
+    opacity: 0.3;
+    cursor: pointer;
+    align-items: center;
+}
+
+.checkbox {
+    margin: 0 8px 0 0;
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.todoInput {
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 35%);
+}
+
+.todoInput > input {
+    border: 0;
+    border-radius: 4px;
+    width: 90%;
+}
+
+.todoInput > input:focus {
+    outline: none;
+}
+
+.todoInputAddButton {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    cursor: pointer;
+}
