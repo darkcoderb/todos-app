@@ -4,7 +4,8 @@
     border-radius: 4px;
     background-color: #FFFFFF;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 35%);
-    height: 350px;
+    max-height: 400px;
+    max-width: 1200px;
     z-index: 1;
 }
 

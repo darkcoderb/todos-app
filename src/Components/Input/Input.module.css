@@ -6,6 +6,7 @@
     background-color: #FFFFFF;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 35%);
     justify-content: space-between;
+    max-width: 1200px;
 }
 
 .todoInput > input {
