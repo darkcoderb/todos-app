@@ -16,9 +16,11 @@ const TodosList = () => {
 				return <TodosListItem
 					key={item.id}
 					id={item.id}
-					text={item.text}
+					value={item.value}
 					isDone={item.isDone}
 					isHovered={item.isHovered}
+					isMenuOpen={item.isMenuOpen}
+					isEditing={item.isEditing}
 				/>
 			})
 		} else if(filters.isDone) {
@@ -27,9 +29,11 @@ const TodosList = () => {
 					return <TodosListItem
 						key={item.id}
 						id={item.id}
-						text={item.text}
+						value={item.value}
 						isDone={item.isDone}
 						isHovered={item.isHovered}
+						isMenuOpen={item.isMenuOpen}
+						isEditing={item.isEditing}
 					/>
 				}
 			})
@@ -39,16 +43,18 @@ const TodosList = () => {
 					return <TodosListItem
 						key={item.id}
 						id={item.id}
-						text={item.text}
+						value={item.value}
 						isDone={item.isDone}
 						isHovered={item.isHovered}
+						isMenuOpen={item.isMenuOpen}
+						isEditing={item.isEditing}
 					/>
 				}
 			})
 		}
 	};
 
-	const onClickHandler = (e, filter) => {
+	const onClick = (e, filter) => {
 		dispatch(switchFilter(filter))
 	}
 
@@ -57,24 +63,26 @@ const TodosList = () => {
 			<div className={S.filters}>
 				<div
 					className={filters.isAll ? S.filterActive : S.filter}
-					onClick={(e) => onClickHandler(e, "isAll")}
+					onClick={(e) => onClick(e, "isAll")}
 				>
 					Все
 				</div>
 				<div
 					className={filters.isActive ? S.filterActive : S.filter}
-					onClick={(e) => onClickHandler(e, "isActive")}
+					onClick={(e) => onClick(e, "isActive")}
 				>
 					Активные
 				</div>
 				<div
 					className={filters.isDone ? S.filterActive : S.filter}
-					onClick={(e) => onClickHandler(e, "isDone")}
+					onClick={(e) => onClick(e, "isDone")}
 				>
 					Завершенные
 				</div>
 			</div>
-			{renderTodos()}
+			<div className={S.todos}>
+				{renderTodos()}
+			</div>
 		</div>
 	)
 }

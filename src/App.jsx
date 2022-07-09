@@ -1,13 +1,16 @@
 import React from "react";
 import S from './App.module.css';
-import TodoInput from "./Components/TodoInput/TodoInput";
+import Input from "./Components/Input/Input";
 import TodosList from "./Components/TodosList/TodosList";
 
 function App(props) {
 	return (
 		<div className={S.container}>
 			<div className={S.todo}>
-				<TodoInput />
+				<div className={S.todoHeader}>
+					todos
+				</div>
+				<Input />
 				<TodosList />
 			</div>
 		</div>
